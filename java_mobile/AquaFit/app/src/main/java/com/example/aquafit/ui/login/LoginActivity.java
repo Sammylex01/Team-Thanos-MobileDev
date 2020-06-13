@@ -26,6 +26,8 @@ import android.widget.Toast;
 import com.example.aquafit.R;
 import com.example.aquafit.ui.login.LoginViewModel;
 import com.example.aquafit.ui.login.LoginViewModelFactory;
+import android.content.*;
+import com.example.aquafit.ui.settings.*;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,10 +37,8 @@ public class LoginActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        if(true)return;
 		loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
-
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText emailEditText = findViewById(R.id.email);
         final TextView intro1TextView = findViewById(R.id.Intro_1);
@@ -128,6 +128,9 @@ public class LoginActivity extends AppCompatActivity {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
+		Intent i = new Intent();
+		i.setClass(this,SettingsActivity.class);
+		startActivity(i);
     }
 
     private void showLoginFailed(@StringRes Integer errorString) {
