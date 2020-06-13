@@ -10,6 +10,7 @@ import java.util.*;
 import android.support.v4.app.*;
 import android.support.v7.widget.*;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SettingsActivity extends AppCompatActivity 
 {
@@ -31,7 +32,11 @@ public class SettingsActivity extends AppCompatActivity
     {
     super.onCreate(savedInstanceState);
     	initLayout();
-		
+		if(getIntent() != null){
+			if(getIntent().getAction()==TimerManager.TIMER_ELAPSED_CODE){
+				Toast.makeText(this,"Time to Drink Water",Toast.LENGTH_LONG).show();
+			}
+		}
     }
 	public void initLayout(){
 		setContentView(R.layout.settings_main);
@@ -53,4 +58,5 @@ public class SettingsActivity extends AppCompatActivity
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_date_range_white_24dp);
         
 	}
+
 }

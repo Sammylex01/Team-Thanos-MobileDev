@@ -1,18 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <RelativeLayout
+    <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:orientation="vertical"
 		android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+		android:gravity="fill_vertical"
+		android:weightSum="12"
+		android:padding="20dp">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"/>
-
-    </RelativeLayout>
+		<TextView
+			android:id="@+id/home_fragmentAmountTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="How many litres do you want to drink a day?"
+			android:padding="10dp"
+			android:textSize="20sp"
+			android:fontFamily="monospace"/>
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/home_fragmentAmountList"
+			android:layout_width="match_parent"
+			android:layout_weight="4"
+			android:layout_height="50dp"/>
+		<TextView
+			android:padding="10dp"
+			android:textSize="20sp"
+			android:text="How often do you want to be reminded?"
+			android:id="@+id/home_fragmentIntervalTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/home_fragmentIntervalList"
+			android:layout_width="match_parent"
+			android:layout_weight="4"
+			android:layout_height="50dp"/>
+		<LinearLayout
+			android:layout_marginTop="10dp"
+			android:layout_width="fill_parent"
+			android:gravity="center"
+			android:layout_height="37dp">
+		<Button
+			android:id="@+id/home_fragmentClearTimers"
+			android:text="Stop"
+			android:layout_width="70dp"
+			android:layout_height="37dp"
+			android:layout_gravity="left"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:background="@color/buttonColor"/>
+        <Button
+			android:id="@+id/home_fragmentCancelChanges"
+			android:text="Cancel"
+			android:layout_width="90dp"
+			android:layout_height="37dp"
+			android:layout_gravity="center"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:background="@color/buttonColor"/>
+        <Button
+			android:id="@+id/home_fragmentSaveChanges"
+			android:text="Save"
+			android:enabled="false"
+			android:layout_width="70dp"
+			android:layout_height="37dp"
+			android:layout_gravity="left"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:background="@color/buttonColor"/>
+        
+		</LinearLayout>
+		<TextView
+			android:id="@+id/home_fragmentResult"
+			android:textSize="18sp"
+			android:padding="10dp"
+			android:layout_weight="4"
+			android:layout_height="50dp"
+			android:layout_width="fill_parent"
+		/>
+			
+			
+    </LinearLayout>
 <!--android.support.v4.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"

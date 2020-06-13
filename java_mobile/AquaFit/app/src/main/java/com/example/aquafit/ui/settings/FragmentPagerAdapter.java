@@ -14,7 +14,7 @@ public class FragmentPagerAdapter extends FragmentPagerAdapter {
         super(fm);
         this.context = context;
         this.fragments = fragments;
-    }
+		}
 
     @Override
     public int getCount() {
