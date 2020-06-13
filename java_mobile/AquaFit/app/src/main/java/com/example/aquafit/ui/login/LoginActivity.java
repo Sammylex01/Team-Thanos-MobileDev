@@ -2,14 +2,14 @@ package com.example.aquafit.ui.login;
 
 import android.app.Activity;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
+import android.support.v7.app.AppCompatActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -35,7 +35,8 @@ public class LoginActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
+        if(true)return;
+		loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
         final EditText usernameEditText = findViewById(R.id.username);

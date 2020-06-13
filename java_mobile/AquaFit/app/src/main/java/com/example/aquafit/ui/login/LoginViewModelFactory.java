@@ -1,8 +1,8 @@
 package com.example.aquafit.ui.login;
 
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.annotation.NonNull;
+import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModelProvider;
+import android.support.annotation.NonNull;
 
 import com.example.aquafit.data.LoginDataSource;
 import com.example.aquafit.data.LoginRepository;
