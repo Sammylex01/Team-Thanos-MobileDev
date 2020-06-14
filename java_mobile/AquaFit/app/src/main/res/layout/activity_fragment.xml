@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:padding="20dp"
+	android:gravity="top"
+	android:weightSum="1"
+    android:orientation="vertical">
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_marginTop="35dp"
+		android:gravity="left"
+		android:textSize="30dp"
+		android:text="Your Activity"
+		android:layout_height="wrap_content"/>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_marginTop="15dp"
+		android:textSize="15dp"
+		android:text="Your Next Cup Is In"
+		android:layout_height="wrap_content"/>
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_marginTop="15dp"
+		android:background="@drawable/purple_card"
+		android:padding="15dp"
+		android:elevation="5dp"
+		android:layout_height="wrap_content">
+		<TextView
+			android:id="@+id/home_activityChronometer"
+			android:layout_width="fill_parent"
+			android:layout_margin="20dp"
+			android:gravity="center"
+			android:textSize ="40dp"
+			android:layout_height="wrap_content"/>
+		<Button
+			android:id="@+id/done"
+        	android:layout_width="151dp"
+        	android:layout_height="37dp"
+			android:text="Done"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_below="@id/home_activityChronometer"
+			android:layout_centerInParent="true"
+			android:enabled="false"
+        	android:background="@color/buttonColor"/>
+        
+	</RelativeLayout>
+	<LinearLayout
+		android:id="@+id/home_FragmentSetTimers"
+        android:layout_width="fill_parent"
+		android:layout_marginTop="10dp"
+		android:layout_gravity="fill_horizontal"
+		android:weightSum="1"
+        android:layout_height="wrap_content">
+	<TextView
+        android:layout_width="151dp"
+        android:layout_height="37dp"
+		android:textSize="15dp"
+		android:layout_weight="1"
+		android:gravity="left|center_vertical"
+		android:text="You have not yet set any reminder."/>
+    <Button
+		android:id="@+id/switchPane"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_gravity="right"
+		android:padding="10dp"
+		android:text="Create A Reminder"
+        android:background="@color/buttonColor"/>
+	</LinearLayout>
+	<TextView
+		android:textSize="18sp"
+		android:padding="10dp"
+		android:id="@+id/infoTextView"
+		android:gravity="center"
+		android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:layout_gravity="bottom"
+        android:layout_margin = "20dp"
+        android:background="@drawable/info_textview"/>
+    
+</LinearLayout>

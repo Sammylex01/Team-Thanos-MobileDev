@@ -16,8 +16,7 @@
 			android:layout_height="wrap_content"
 			android:text="How many litres do you want to drink a day?"
 			android:padding="10dp"
-			android:textSize="20sp"
-			android:fontFamily="monospace"/>
+			android:textSize="20sp"/>
 		<android.support.v7.widget.RecyclerView
 			android:id="@+id/home_fragmentAmountList"
 			android:layout_width="match_parent"
@@ -76,7 +75,9 @@
 			android:padding="10dp"
 			android:layout_weight="4"
 			android:layout_height="50dp"
+			android:layout_margin="20dp"
 			android:layout_width="fill_parent"
+			android:background="@drawable/info_textview"
 		/>
 			
 			
